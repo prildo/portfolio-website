@@ -62,13 +62,13 @@ import { contact, fullName } from '@/data.json'
         <div class='mb-6'>
           <label
             for='name'
-            class='mb-2 block text-sm font-medium text-gray-900 dark:text-white'
+            class='mb-2 block text-sm font-medium text-gray-900'
             >Name</label
           >
           <input
             type='text'
             id='name'
-            class='block w-full rounded-lg border border-gray-300 bg-gray-50 p-4 text-base text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500'
+            class='block w-full rounded-lg border border-gray-300 bg-gray-50 p-4 text-base text-gray-900 focus:border-primary-500 focus:ring-primary-500'
             placeholder={fullName.split(' ')[0]}
           />
         </div>
@@ -77,13 +77,13 @@ import { contact, fullName } from '@/data.json'
         <div class='mb-6'>
           <label
             for='email'
-            class='mb-2 block text-sm font-medium text-gray-900 dark:text-white'
+            class='mb-2 block text-sm font-medium text-gray-900'
             >Email</label
           >
           <input
             id='email'
             type='email'
-            class='block w-full rounded-lg border border-gray-300 bg-gray-50 p-4 text-base text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500'
+            class='block w-full rounded-lg border border-gray-300 bg-gray-50 p-4 text-base text-gray-900 focus:border-primary-500 focus:ring-primary-500'
             placeholder={contact.email}
           />
         </div>
@@ -92,20 +92,20 @@ import { contact, fullName } from '@/data.json'
         <div class='mb-4'>
           <label
             for='message'
-            class='mb-2 block text-sm font-medium text-gray-900 dark:text-white'
+            class='mb-2 block text-sm font-medium text-gray-900'
             >Nachricht</label
           >
           <textarea
             id='message'
             rows='8'
-            class='block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500'
+            class='block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500'
             placeholder='Ich würde gern ...'></textarea>
         </div>
 
         <div
           style='display: none;'
           id='alert-container'
-          class='mb-4 flex items-center rounded-lg border border-red-300 bg-red-50 p-4 text-sm text-red-800 dark:border-red-800 dark:bg-gray-800 dark:text-red-400'
+          class='mb-4 flex items-center rounded-lg border border-red-300 bg-red-50 p-4 text-sm text-red-800'
           role='alert'>
           <svg
             class='me-3 inline h-4 w-4 flex-shrink-0'
@@ -124,7 +124,7 @@ import { contact, fullName } from '@/data.json'
         <div
           id='success-alert'
           style='display: none;'
-          class='mb-4 rounded-lg bg-green-50 p-4 text-sm text-green-800 dark:bg-gray-800 dark:text-green-400'
+          class='mb-4 rounded-lg bg-green-50 p-4 text-sm text-green-800'
           role='alert'>
           Message sent successfully
         </div>
@@ -132,7 +132,7 @@ import { contact, fullName } from '@/data.json'
         <div>
           <button
             type='submit'
-            class='rounded-lg bg-primary-700 px-5 py-3 text-center text-base font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800'
+            class='rounded-lg bg-primary-700 px-5 py-3 text-center text-base font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300'
             >Senden
 
             <svg
