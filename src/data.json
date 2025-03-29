@@ -1,0 +1,63 @@
+{
+  "metaData": {
+    "title": "Full Stack Developer",
+    "description": "I am fullstack dev that build fast website. based in ...",
+    "keywords": ["fullstack", "javascript", "devops", "london dev"]
+  },
+  "fullName": "Alex Johnson",
+  "rotatingWords": ["Mobile Application", "Web Development", "DevOps AWS"],
+  "aboutMe": [
+    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quod magni enim facilis porro, repellat soluta distinctio deserunt veritatis nam molestiae eius nostrum natus dolor? Voluptates in iusto aspernatur illum",
+    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quod magni enim facilis porro.",
+    " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quod magni enim facilis porro, repellat soluta distinctio deserunt veritatis nam molestiae eius nostrum natus dolor? Voluptates in iusto aspernatur illum."
+  ],
+  "skills": [
+    "javascript",
+    "jest",
+    "elixir",
+    "kali",
+    "go",
+    "rust",
+    "cs",
+    "hugo",
+    "postgresql",
+    "flutter",
+    "jenkins",
+    "python"
+  ],
+  "projects": [
+    {
+      "imageSrc": "https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_700/Challenges/qd1p2yaogl41ymtozppc.jpg",
+      "title": "Connect Four game",
+      "codeSrc": "https://github.com/zougari47/portfolio-template",
+      "liveDemoURL": "https://github.com/zougari47/portfolio-template"
+    },
+    {
+      "imageSrc": "https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_700/Challenges/zurpxclpp6gavavnw6d2.jpg",
+      "title": "Entertainment web app",
+      "codeSrc": "https://github.com/zougari47/portfolio-template",
+      "liveDemoURL": "https://github.com/zougari47/portfolio-template"
+    },
+    {
+      "imageSrc": "https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_700/Challenges/mubyltw6vmbmndvlymzn.jpg",
+      "title": "Meet landing page",
+      "codeSrc": "https://github.com/zougari47/portfolio-template",
+      "liveDemoURL": "https://github.com/zougari47/portfolio-template"
+    },
+    {
+      "imageSrc": "https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_700/Challenges/lowozx0v3khn1hyggkqy.jpg",
+      "title": "Devjobs web app",
+      "codeSrc": "https://github.com/zougari47/portfolio-template",
+      "liveDemoURL": "https://github.com/zougari47/portfolio-template"
+    }
+  ],
+  "contact": {
+    "email": "alex@johnson.dev",
+    "location": "UK, London",
+    "social": {
+      "linkedin": "https://linkedin.com/in/yourUsername",
+      "github": "https://github.com/yourUsername",
+      "insta": "https://www.instagram.com/yourUsername"
+    }
+  }
+}
