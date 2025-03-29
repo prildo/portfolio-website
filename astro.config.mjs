@@ -5,6 +5,6 @@ import tailwind from '@astrojs/tailwind'
 // https://astro.build/config
 export default defineConfig({
   site: 'https://prildo.github.io',
-  base: '/portfolio-template',
+  base: '/portfolio-website',
   integrations: [tailwind()],
 })
