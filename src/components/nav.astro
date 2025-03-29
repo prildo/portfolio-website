@@ -1,7 +1,7 @@
 ---
 import { fullName } from '@/data.json'
 
-const sections = ['About', 'Contact']
+const sections = [{text: 'Über mich', anchor: 'about'}, {text: 'Kontakt', anchor: 'contact'}]
 ---
 
 <nav
@@ -49,9 +49,9 @@ const sections = ['About', 'Contact']
           sections.map(s => (
             <li>
               <a
-                href={`#${s.toLowerCase()}`}
+                href={`#${s.anchor}`}
                 class='topg block rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:p-0 md:hover:bg-transparent md:hover:text-primary-700 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 dark:hover:text-primary-500 md:dark:hover:bg-transparent md:dark:hover:text-primary-500'>
-                {s}
+                {s.text}
               </a>
             </li>
           ))
