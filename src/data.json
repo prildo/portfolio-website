@@ -1,21 +1,88 @@
 {
   "metaData": {
-    "title": "Full Stack Developer",
-    "description": "I am fullstack dev that build fast website. based in ...",
-    "keywords": ["fullstack", "angular", "devops", "spring boot"]
+    "title": "Freelance Fullstack-Entwickler",
+    "description": "Dominik Prilmüller – freiberuflicher Fullstack-Entwickler aus Linz. Individuelle Webanwendungen mit Angular & Spring Boot, DevOps und Cloud.",
+    "keywords": [
+      "Fullstack-Entwickler",
+      "Freelancer",
+      "Angular",
+      "Spring Boot",
+      "Java",
+      "DevOps",
+      "Linz",
+      "Österreich"
+    ]
   },
   "fullName": "Dominik Prilmüller",
-  "rotatingWords": ["Web Development", "DevOps", "Angular + Spring Boot"],
+  "role": "Freelance Fullstack-Entwickler",
+  "heroTitle": "Individuelle Webanwendungen & Apps",
+  "heroTitleAccent": "mit durchdachtem Requirement Engineering",
+  "tagline": "Ich unterstütze dich schon bei der Planung: Wir klären gemeinsam, was du wirklich brauchst und wie wir es am besten umsetzen – von der ersten Anforderung bis zur fertigen Lösung.",
+  "available": true,
+  "availabilityText": "Verfügbar für neue Projekte",
   "aboutMe": [
     "Mein Name ist Dominik und ich bin ein erfahrener Fullstack-Entwickler mit Schwerpunkt auf Java, Spring und Angular. Seit über 10 Jahren entwickle ich maßgeschneiderte Softwarelösungen.",
-    "Mein Fokus liegt auf sauberem Code, nachhaltigen Architekturen und effizienter Umsetzung. Ich unterstütze dich dabei, deine Ideen in leistungsfähige Anwendungen zu verwandeln – sei es durch individuelle Webanwendungen, moderne CMS-Lösungen oder maßgeschneiderte Software, die genau auf deine Anforderungen zugeschnitten ist.",
+    "Mein Fokus liegt auf sauberem Code, nachhaltigen Architekturen und effizienter Umsetzung. Ich unterstütze dich dabei, deine Ideen in leistungsfähige Anwendungen zu verwandeln – sei es durch individuelle Webanwendungen, moderne CMS-Lösungen oder Software, die genau auf deine Anforderungen zugeschnitten ist.",
+    "In der Umsetzung setze ich auf moderne, KI-gestützte Entwicklungswerkzeuge, um schneller und mit gleichbleibender Qualität zu liefern.",
     "Lass uns gemeinsam dein Projekt auf das nächste Level bringen!"
+  ],
+  "stats": [
+    { "value": "10+", "label": "Jahre Erfahrung" },
+    { "value": "Fullstack", "label": "Frontend bis DevOps" },
+    { "value": "Remote", "label": "Linz, Österreich" }
+  ],
+  "services": [
+    {
+      "icon": "app-window",
+      "title": "Individuelle Webanwendungen",
+      "description": "Performante Single-Page-Applikationen mit Angular – vom Konzept bis zum produktiven Betrieb, sauber getestet und wartbar."
+    },
+    {
+      "icon": "server",
+      "title": "Backend & APIs",
+      "description": "Robuste Backends mit Java & Spring Boot, durchdachte REST-APIs und Datenmodelle auf Basis von PostgreSQL."
+    },
+    {
+      "icon": "cloud",
+      "title": "DevOps & Cloud",
+      "description": "Automatisierte CI/CD-Pipelines, Containerisierung mit Docker & Kubernetes und Deployments in Azure."
+    },
+    {
+      "icon": "refresh",
+      "title": "Modernisierung & Beratung",
+      "description": "Ablösung von Altsystemen, Architektur-Reviews und technische Beratung, damit deine Software langfristig tragfähig bleibt."
+    }
+  ],
+  "process": [
+    {
+      "step": "01",
+      "title": "Kennenlernen",
+      "description": "Wir klären deine Ziele, Anforderungen und Rahmenbedingungen in einem unverbindlichen Gespräch."
+    },
+    {
+      "step": "02",
+      "title": "Konzept",
+      "description": "Ich entwerfe eine passende technische Lösung inklusive Aufwandsschätzung und Zeitplan."
+    },
+    {
+      "step": "03",
+      "title": "Umsetzung",
+      "description": "Entwicklung in kurzen, transparenten Iterationen mit regelmäßigen Zwischenständen."
+    },
+    {
+      "step": "04",
+      "title": "Betrieb & Support",
+      "description": "Deployment, Monitoring und laufende Weiterentwicklung – auf Wunsch übernehme ich auch den Betrieb."
+    }
   ],
   "skills": [
     "angular",
-    "spring",
+    "react",
     "javascript",
+    "java",
+    "spring",
     "postgresql",
+    "aws",
     "azure",
     "gitlab",
     "jenkins",
@@ -23,7 +90,27 @@
     "kubernetes"
   ],
   "projects": [
-
+    {
+      "title": "Projekttitel",
+      "category": "Webanwendung",
+      "description": "Kurze Beschreibung des Projekts: Ausgangslage, umgesetzte Lösung und das Ergebnis für den Kunden. Ersetze diesen Platzhalter durch eine echte Case Study.",
+      "tags": ["Angular", "Spring Boot", "PostgreSQL"],
+      "link": ""
+    },
+    {
+      "title": "Projekttitel",
+      "category": "DevOps",
+      "description": "Kurze Beschreibung des Projekts: Ausgangslage, umgesetzte Lösung und das Ergebnis für den Kunden. Ersetze diesen Platzhalter durch eine echte Case Study.",
+      "tags": ["Docker", "Kubernetes", "Azure"],
+      "link": ""
+    },
+    {
+      "title": "Projekttitel",
+      "category": "Modernisierung",
+      "description": "Kurze Beschreibung des Projekts: Ausgangslage, umgesetzte Lösung und das Ergebnis für den Kunden. Ersetze diesen Platzhalter durch eine echte Case Study.",
+      "tags": ["Java", "Spring", "CI/CD"],
+      "link": ""
+    }
   ],
   "contact": {
     "email": "dominik.prilmueller@gmail.com",

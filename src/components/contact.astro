@@ -1,157 +1,188 @@
 ---
 import { contact, fullName } from '@/data.json'
+const { social } = contact
 ---
 
-<section id='contact' class='min-h-[600px]'>
-  <h2 class='mb-6 hidden md:block text-center text-4xl'>Kontakt</h2>
-  <div class='grid grid-cols-1 gap-4 md:grid-cols-12'>
-    <div
-      class='col-span-12 mb-4 grid content-start md:col-span-4'
-      data-aos='fade-right'
-      data-aos-duration='1000'>
-      <h3 class='text-3xl'>Get in touch</h3>
-      <p class='text-lg'>Erzähl mir von deinem Projekt!</p>
+<section
+  id='contact'
+  class='section border-t border-slate-100 bg-slate-50 dark:border-slate-900 dark:bg-slate-900/30'>
+  <div class='wrapper'>
+    <div class='grid gap-12 md:grid-cols-2 md:gap-16'>
+      <div data-reveal>
+        <span class='eyebrow'>Kontakt</span>
+        <h2 class='section-title'>Erzähl mir von deinem Projekt</h2>
+        <p class='section-lead'>
+          Du hast eine Idee oder ein konkretes Vorhaben? Schreib mir – ich melde
+          mich in der Regel innerhalb von 24 Stunden zurück.
+        </p>
 
-      <div class='more_info mt-5'>
-        <dl class='mt-8'>
-          <div class='mb-3 flex gap-2'>
-            <dt>
+        <dl class='mt-8 space-y-4'>
+          <div class='flex items-center gap-3'>
+            <dt
+              class='flex h-10 w-10 items-center justify-center rounded-lg bg-white text-primary-600 shadow-sm dark:bg-slate-800 dark:text-primary-400'>
+              <span class='sr-only'>E-Mail</span>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
-                width='24'
-                height='24'
+                width='20'
+                height='20'
                 viewBox='0 0 24 24'
                 fill='none'
                 stroke='currentColor'
                 stroke-width='2'
                 stroke-linecap='round'
-                stroke-linejoin='round'
-                class='size-6'
-                ><rect width='20' height='16' x='2' y='4' rx='2'></rect><path
-                  d='m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7'></path></svg
-              >
+                stroke-linejoin='round'>
+                <rect width='20' height='16' x='2' y='4' rx='2'></rect>
+                <path d='m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7'></path>
+              </svg>
             </dt>
-            <dd>{contact.email}</dd>
+            <dd>
+              <a
+                href={`mailto:${contact.email}`}
+                class='font-medium text-slate-700 hover:text-primary-600 dark:text-slate-200 dark:hover:text-primary-400'>
+                {contact.email}
+              </a>
+            </dd>
           </div>
-          <div class='flex gap-2'>
-            <dt>
+          <div class='flex items-center gap-3'>
+            <dt
+              class='flex h-10 w-10 items-center justify-center rounded-lg bg-white text-primary-600 shadow-sm dark:bg-slate-800 dark:text-primary-400'>
+              <span class='sr-only'>Standort</span>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
-                width='24'
-                height='24'
+                width='20'
+                height='20'
                 viewBox='0 0 24 24'
                 fill='none'
                 stroke='currentColor'
                 stroke-width='2'
                 stroke-linecap='round'
-                stroke-linejoin='round'
-                class='size-6'
-                ><path d='M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z'
-                ></path><circle cx='12' cy='10' r='3'></circle></svg
-              >
+                stroke-linejoin='round'>
+                <path d='M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z'></path>
+                <circle cx='12' cy='10' r='3'></circle>
+              </svg>
             </dt>
-            <dd>{contact.location}</dd>
+            <dd class='font-medium text-slate-700 dark:text-slate-200'>
+              {contact.location}
+            </dd>
           </div>
         </dl>
-      </div>
-    </div>
 
-    <div class='col-span-12 md:col-span-8'>
-      <form id='contact-form'>
-        {/* Name */}
-        <div class='mb-6'>
-          <label
-            for='name'
-            class='mb-2 block text-sm font-medium text-gray-900'
-            >Name</label
-          >
-          <input
-            type='text'
-            id='name'
-            class='block w-full rounded-lg border border-gray-300 bg-gray-50 p-4 text-base text-gray-900 focus:border-primary-500 focus:ring-primary-500'
-            placeholder={fullName.split(' ')[0]}
-          />
-        </div>
-
-        {/* Email */}
-        <div class='mb-6'>
-          <label
-            for='email'
-            class='mb-2 block text-sm font-medium text-gray-900'
-            >Email</label
-          >
-          <input
-            id='email'
-            type='email'
-            class='block w-full rounded-lg border border-gray-300 bg-gray-50 p-4 text-base text-gray-900 focus:border-primary-500 focus:ring-primary-500'
-            placeholder={contact.email}
-          />
-        </div>
-
-        {/* Message */}
-        <div class='mb-4'>
-          <label
-            for='message'
-            class='mb-2 block text-sm font-medium text-gray-900'
-            >Nachricht</label
-          >
-          <textarea
-            id='message'
-            rows='8'
-            class='block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500'
-            placeholder='Ich würde gern ...'></textarea>
-        </div>
-
-        <div
-          style='display: none;'
-          id='alert-container'
-          class='mb-4 flex items-center rounded-lg border border-red-300 bg-red-50 p-4 text-sm text-red-800'
-          role='alert'>
-          <svg
-            class='me-3 inline h-4 w-4 flex-shrink-0'
-            aria-hidden='true'
-            xmlns='http://www.w3.org/2000/svg'
-            fill='currentColor'
-            viewBox='0 0 20 20'>
-            <path
-              d='M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z'
-            ></path>
-          </svg>
-          <span class='sr-only'>Info</span>
-          <div id='alert-body'></div>
-        </div>
-
-        <div
-          id='success-alert'
-          style='display: none;'
-          class='mb-4 rounded-lg bg-green-50 p-4 text-sm text-green-800'
-          role='alert'>
-          Message sent successfully
-        </div>
-
-        <div>
-          <button
-            type='submit'
-            class='rounded-lg bg-primary-700 px-5 py-3 text-center text-base font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300'
-            >Senden
-
+        <div class='mt-8 flex gap-3'>
+          <a
+            href={social.linkedin}
+            target='_blank'
+            rel='noopener'
+            aria-label='LinkedIn'
+            class='flex h-10 w-10 items-center justify-center rounded-lg bg-white text-slate-600 shadow-sm transition-colors hover:text-primary-600 dark:bg-slate-800 dark:text-slate-300 dark:hover:text-primary-400'>
             <svg
               xmlns='http://www.w3.org/2000/svg'
-              width='24'
-              height='24'
+              width='20'
+              height='20'
               viewBox='0 0 24 24'
               fill='none'
               stroke='currentColor'
               stroke-width='2'
               stroke-linecap='round'
-              stroke-linejoin='round'
-              class='inline'
-              ><path d='m22 2-7 20-4-9-9-4Z'></path><path d='M22 2 11 13'
-              ></path></svg
-            >
-          </button>
+              stroke-linejoin='round'>
+              <path
+                d='M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z'
+              ></path>
+              <rect width='4' height='12' x='2' y='9'></rect>
+              <circle cx='4' cy='4' r='2'></circle>
+            </svg>
+          </a>
         </div>
-      </form>
+      </div>
+
+      <div data-reveal>
+        <form id='contact-form' class='card space-y-5 p-6 sm:p-8'>
+          <div>
+            <label
+              for='name'
+              class='mb-2 block text-sm font-medium text-slate-700 dark:text-slate-300'
+              >Name</label
+            >
+            <input
+              type='text'
+              id='name'
+              autocomplete='name'
+              class='block w-full rounded-lg border border-slate-300 bg-white p-3 text-slate-900 placeholder:text-slate-400 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/30 dark:border-slate-700 dark:bg-slate-800 dark:text-white dark:placeholder:text-slate-500'
+              placeholder={fullName.split(' ')[0]}
+            />
+          </div>
+
+          <div>
+            <label
+              for='email'
+              class='mb-2 block text-sm font-medium text-slate-700 dark:text-slate-300'
+              >E-Mail</label
+            >
+            <input
+              id='email'
+              type='email'
+              autocomplete='email'
+              class='block w-full rounded-lg border border-slate-300 bg-white p-3 text-slate-900 placeholder:text-slate-400 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/30 dark:border-slate-700 dark:bg-slate-800 dark:text-white dark:placeholder:text-slate-500'
+              placeholder='name@beispiel.at'
+            />
+          </div>
+
+          <div>
+            <label
+              for='message'
+              class='mb-2 block text-sm font-medium text-slate-700 dark:text-slate-300'
+              >Nachricht</label
+            >
+            <textarea
+              id='message'
+              rows='6'
+              class='block w-full rounded-lg border border-slate-300 bg-white p-3 text-slate-900 placeholder:text-slate-400 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/30 dark:border-slate-700 dark:bg-slate-800 dark:text-white dark:placeholder:text-slate-500'
+              placeholder='Ich würde gerne …'></textarea>
+          </div>
+
+          <div
+            style='display: none;'
+            id='alert-container'
+            class='flex items-center gap-2 rounded-lg border border-red-300 bg-red-50 p-4 text-sm text-red-800 dark:border-red-900/60 dark:bg-red-950/40 dark:text-red-300'
+            role='alert'>
+            <svg
+              class='h-4 w-4 flex-shrink-0'
+              aria-hidden='true'
+              xmlns='http://www.w3.org/2000/svg'
+              fill='currentColor'
+              viewBox='0 0 20 20'>
+              <path
+                d='M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z'
+              ></path>
+            </svg>
+            <div id='alert-body'></div>
+          </div>
+
+          <div
+            id='success-alert'
+            style='display: none;'
+            class='rounded-lg border border-emerald-300 bg-emerald-50 p-4 text-sm text-emerald-800 dark:border-emerald-900/60 dark:bg-emerald-950/40 dark:text-emerald-300'
+            role='alert'>
+            Danke! Deine Nachricht wurde erfolgreich gesendet.
+          </div>
+
+          <button type='submit' class='btn-primary w-full'>
+            Nachricht senden
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              width='20'
+              height='20'
+              viewBox='0 0 24 24'
+              fill='none'
+              stroke='currentColor'
+              stroke-width='2'
+              stroke-linecap='round'
+              stroke-linejoin='round'>
+              <path d='m22 2-7 20-4-9-9-4Z'></path>
+              <path d='M22 2 11 13'></path>
+            </svg>
+          </button>
+        </form>
+      </div>
     </div>
   </div>
 </section>
@@ -170,28 +201,27 @@ import { contact, fullName } from '@/data.json'
   const alertSuccess = $('#success-alert') as HTMLDivElement
 
   function getFormValues() {
-    const name = nameInput!.value ?? ''
-    const email = emailInput!.value ?? ''
-    const message = messageInput!.value ?? ''
-
-    return { name, email, message }
+    return {
+      name: nameInput?.value ?? '',
+      email: emailInput?.value ?? '',
+      message: messageInput?.value ?? '',
+    }
   }
 
   function validate() {
     const schema = v.object({
-      name: v.pipe(v.string(), v.nonEmpty('Name is required')),
-      email: v.pipe(v.string(), v.trim(), v.email('Invalid Email')),
+      name: v.pipe(v.string(), v.nonEmpty('Bitte gib deinen Namen an.')),
+      email: v.pipe(v.string(), v.trim(), v.email('Ungültige E-Mail-Adresse.')),
       message: v.custom(
         input => typeof input === 'string' && input.split(' ').length > 5,
-        'Please write a bit more so I can understand you better!'
+        'Bitte beschreibe dein Anliegen etwas ausführlicher.'
       ),
     })
 
-    const { name, email, message } = getFormValues()
-
-    const result = v.safeParse(schema, { name, email, message })
+    const result = v.safeParse(schema, getFormValues())
 
     if (!result.success) {
+      alertSuccess.style.display = 'none'
       alertContainer.style.display = 'flex'
       alertBody.textContent = result.issues[0].message
       return false
@@ -201,42 +231,61 @@ import { contact, fullName } from '@/data.json'
     return true
   }
 
+  const accessKey = import.meta.env.PUBLIC_WEB3_FORMS
+
+  function showError(message: string) {
+    alertSuccess.style.display = 'none'
+    alertContainer.style.display = 'flex'
+    alertBody.textContent = message
+  }
+
   form.addEventListener('submit', e => {
     e.preventDefault()
-    const isValid = validate()
+    if (!validate()) return
 
-    if (isValid) {
-      const data = {
-        ...getFormValues(),
-        access_key: import.meta.env.PUBLIC_WEB3_FORMS,
-      }
-
-      fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Accept: 'application/json',
-        },
-        body: JSON.stringify(data),
-      })
-        .then(async response => {
-          const res = await response.json()
-
-          if (res.success) {
-            alertContainer.style.display = 'none'
-            alertSuccess.style.display = 'block'
-          } else {
-            alertContainer.style.display = 'flex'
-            alertBody.textContent = "Somthing went wrong! message didn't sent."
-          }
-        })
-        .catch(error => {
-          console.log(error)
-          alertContainer.style.display = 'flex'
-          alertBody.textContent = "Somthing went wrong! message didn't sent."
-        })
-        .then(() => form.reset())
+    if (!accessKey) {
+      showError(
+        'Kontaktformular ist noch nicht konfiguriert (fehlender web3forms-Key). Schreib mir bitte direkt per E-Mail.'
+      )
+      return
     }
+
+    const values = getFormValues()
+    const data = {
+      access_key: accessKey,
+      subject: `Neue Anfrage über die Website von ${values.name}`,
+      from_name: values.name,
+      ...values,
+    }
+
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+      .then(async response => {
+        const res = await response.json()
+        if (res.success) {
+          alertContainer.style.display = 'none'
+          alertSuccess.style.display = 'block'
+          form.reset()
+        } else {
+          // Surface the actual web3forms reason (e.g. invalid access key).
+          showError(
+            res.message
+              ? `Nachricht konnte nicht gesendet werden: ${res.message}`
+              : 'Etwas ist schiefgelaufen – die Nachricht konnte nicht gesendet werden.'
+          )
+        }
+      })
+      .catch(() =>
+        showError(
+          'Etwas ist schiefgelaufen – die Nachricht konnte nicht gesendet werden.'
+        )
+      )
   })
 
   form.reset()

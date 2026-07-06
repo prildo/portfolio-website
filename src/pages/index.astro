@@ -2,22 +2,54 @@
 import Head from '@/components/head.astro'
 import Nav from '@/components/nav.astro'
 import Hero from '@/components/hero.astro'
+import Services from '@/components/services.astro'
 import About from '@/components/about.astro'
+import Technologies from '@/components/technologies.astro'
+import Experience from '@/components/experience.astro'
+import Projects from '@/components/projects.astro'
 import Contact from '@/components/contact.astro'
 import Footer from '@/components/footer.astro'
 ---
 
-<html lang='en' class='scroll-smooth'>
+<html lang='de'>
   <head>
     <Head />
   </head>
   <body>
     <Nav />
-    <main class='container'>
+    <main>
       <Hero />
+      <Services />
       <About />
+      <Technologies />
+      <Experience />
+      <Projects />
       <Contact />
     </main>
     <Footer />
+
+    <script>
+      // Reveal sections as they scroll into view.
+      const els = document.querySelectorAll('[data-reveal]')
+      if (
+        'IntersectionObserver' in window &&
+        !window.matchMedia('(prefers-reduced-motion: reduce)').matches
+      ) {
+        const io = new IntersectionObserver(
+          (entries, obs) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible')
+                obs.unobserve(entry.target)
+              }
+            })
+          },
+          { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+        )
+        els.forEach(el => io.observe(el))
+      } else {
+        els.forEach(el => el.classList.add('is-visible'))
+      }
+    </script>
   </body>
 </html>

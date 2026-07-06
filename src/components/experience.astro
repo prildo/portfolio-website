@@ -1,0 +1,36 @@
+---
+import { process } from '@/data.json'
+---
+
+<section
+  id='process'
+  class='section border-t border-slate-100 dark:border-slate-900'>
+  <div class='wrapper'>
+    <div data-reveal>
+      <span class='eyebrow'>Zusammenarbeit</span>
+      <h2 class='section-title'>So läuft ein Projekt ab</h2>
+      <p class='section-lead'>
+        Transparent, planbar und in engem Austausch – damit du jederzeit weißt,
+        woran du bist.
+      </p>
+    </div>
+
+    <ol class='mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4'>
+      {
+        process.map((phase, i) => (
+          <li class='relative' data-reveal style={`animation-delay:${i * 80}ms`}>
+            <div class='card h-full hover:border-primary-300 hover:shadow-lg hover:shadow-primary-900/5 dark:hover:border-primary-700'>
+              <span class='text-3xl font-bold text-primary-200 dark:text-primary-900'>
+                {phase.step}
+              </span>
+              <h3 class='mt-2 text-lg font-semibold'>{phase.title}</h3>
+              <p class='mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-400'>
+                {phase.description}
+              </p>
+            </div>
+          </li>
+        ))
+      }
+    </ol>
+  </div>
+</section>
