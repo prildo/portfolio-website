@@ -1,9 +1,56 @@
 ---
-import { fullName, metaData, role } from '@/data.json'
+import { contact, fullName, metaData, role, skills } from '@/data.json'
 import '@/styles/global.css'
 
 const title = `${fullName} – ${role}`
-const siteUrl = 'https://prildo.github.io'
+const siteUrl = 'https://dominik-prilmueller.at'
+
+const skillLabels: Record<string, string> = {
+  javascript: 'JavaScript',
+  postgresql: 'PostgreSQL',
+  aws: 'AWS',
+  spring: 'Spring Boot',
+}
+
+const knowsAbout = skills.map(skill => {
+  if (typeof skill !== 'string') return skill.label
+  return skillLabels[skill] ?? skill.charAt(0).toUpperCase() + skill.slice(1)
+})
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Person',
+      '@id': `${siteUrl}/#person`,
+      name: fullName,
+      jobTitle: role,
+      url: siteUrl,
+      email: `mailto:${contact.email}`,
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Linz',
+        addressCountry: 'AT',
+      },
+      knowsAbout,
+      sameAs: [contact.social.linkedin, contact.social.github],
+    },
+    {
+      '@type': 'ProfessionalService',
+      '@id': `${siteUrl}/#service`,
+      name: title,
+      description: metaData.description,
+      url: siteUrl,
+      provider: { '@id': `${siteUrl}/#person` },
+      areaServed: { '@type': 'Country', name: 'Österreich' },
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Linz',
+        addressCountry: 'AT',
+      },
+    },
+  ],
+}
 ---
 
 <meta charset='utf-8' />
@@ -16,6 +63,8 @@ const siteUrl = 'https://prildo.github.io'
 <meta name='author' content={fullName} />
 <meta name='keywords' content={metaData.keywords.join(', ')} />
 <link rel='canonical' href={siteUrl} />
+
+<script type='application/ld+json' set:html={JSON.stringify(jsonLd)} />
 
 <meta name='theme-color' content='#020617' />
 
