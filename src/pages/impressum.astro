@@ -1,0 +1,62 @@
+---
+import LegalLayout from '@/layouts/LegalLayout.astro'
+import { fullName, contact } from '@/data.json'
+---
+
+<LegalLayout
+  title='Impressum'
+  description='Impressum und Offenlegung gemäß § 5 ECG und § 25 MedienG.'>
+  <p>
+    Offenlegung gemäß § 5 E-Commerce-Gesetz (ECG), § 14 UGB und § 25
+    Mediengesetz (MedienG).
+  </p>
+
+  <h2>Diensteanbieter / Medieninhaber</h2>
+  <p>
+    <strong>{fullName}</strong><br />
+    Aumühlstraße 49a<br />
+    4050 Traun<br />
+    Österreich
+  </p>
+
+  <h2>Kontakt</h2>
+  <p>
+    E-Mail: <a href={`mailto:${contact.email}`}>{contact.email}</a>
+  </p>
+
+  <h2>Unternehmensgegenstand</h2>
+  <p>
+    Dienstleistungen in der automatischen Datenverarbeitung und
+    Informationstechnik (individuelle Softwareentwicklung).
+  </p>
+
+  <h2>Gewerbliche Angaben</h2>
+  <p>
+    Gewerbewortlaut: Dienstleistungen in der automatischen Datenverarbeitung und
+    Informationstechnik<br />
+    Mitgliedschaft: Wirtschaftskammer Oberösterreich (WKO)<br />
+    Anwendbare Rechtsvorschriften: Gewerbeordnung (GewO),
+    <a href='https://www.ris.bka.gv.at' rel='noopener'>www.ris.bka.gv.at</a>
+  </p>
+
+  <h2>Umsatzsteuer</h2>
+  <p>
+    Als Kleinunternehmer gemäß § 6 Abs. 1 Z 27 UStG wird keine Umsatzsteuer
+    berechnet, daher wird auch keine Umsatzsteuer ausgewiesen.
+  </p>
+
+  <h2>Haftung für Inhalte dieser Website</h2>
+  <p>
+    Die Inhalte dieser Website werden mit größtmöglicher Sorgfalt erstellt.
+    Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann
+    dennoch keine Gewähr übernommen werden.
+  </p>
+
+  <h2>Urheberrecht</h2>
+  <p>
+    Die Inhalte und Werke auf dieser Website unterliegen dem österreichischen
+    Urheberrecht. Vervielfältigung, Bearbeitung und jede Art der Verwertung
+    außerhalb der Grenzen des Urheberrechts bedürfen der schriftlichen
+    Zustimmung des Autors.
+  </p>
+</LegalLayout>

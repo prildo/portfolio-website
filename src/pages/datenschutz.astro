@@ -1,0 +1,115 @@
+---
+import LegalLayout from '@/layouts/LegalLayout.astro'
+import { fullName, contact } from '@/data.json'
+---
+
+<LegalLayout
+  title='Datenschutzerklärung'
+  description='Informationen zur Verarbeitung personenbezogener Daten gemäß Art. 13 DSGVO.'>
+  <p>
+    Der Schutz deiner personenbezogenen Daten ist mir wichtig. Nachfolgend
+    informiere ich dich gemäß Art. 13 der Datenschutz-Grundverordnung (DSGVO)
+    über die Verarbeitung personenbezogener Daten im Zusammenhang mit dieser
+    Website.
+  </p>
+
+  <h2>1. Verantwortlicher</h2>
+  <p>
+    Verantwortlich für die Datenverarbeitung im Sinne der DSGVO ist:
+  </p>
+  <p>
+    <strong>{fullName}</strong><br />
+    Aumühlstraße 49a, 4050 Traun, Österreich<br />
+    E-Mail: <a href={`mailto:${contact.email}`}>{contact.email}</a>
+  </p>
+
+  <h2>2. Aufruf der Website / Hosting</h2>
+  <p>
+    Diese Website wird bei <strong>GitHub Pages</strong> gehostet, einem Dienst
+    der GitHub, Inc. (88 Colin P. Kelly Jr. Street, San Francisco, CA 94107,
+    USA). Beim Aufruf der Website werden durch den Hosting-Anbieter technisch
+    notwendige Daten verarbeitet, die dein Browser automatisch übermittelt,
+    insbesondere:
+  </p>
+  <ul>
+    <li>IP-Adresse des anfragenden Geräts</li>
+    <li>Datum und Uhrzeit des Zugriffs</li>
+    <li>aufgerufene Seite bzw. Datei</li>
+    <li>übertragene Datenmenge</li>
+    <li>Browsertyp und Betriebssystem</li>
+  </ul>
+  <p>
+    Die Verarbeitung erfolgt zur Gewährleistung eines sicheren und stabilen
+    Betriebs der Website. Rechtsgrundlage ist das berechtigte Interesse gemäß
+    Art. 6 Abs. 1 lit. f DSGVO. Da GitHub, Inc. in den USA sitzt, kann es zu
+    einer Datenübermittlung in ein Drittland kommen; GitHub stützt diese auf die
+    EU-Standardvertragsklauseln. Details:
+    <a href='https://docs.github.com/privacy' rel='noopener'
+      >https://docs.github.com/privacy</a
+    >.
+  </p>
+
+  <h2>3. Kontaktaufnahme per Kontaktformular</h2>
+  <p>
+    Wenn du das Kontaktformular auf dieser Website nutzt, werden die von dir
+    eingegebenen Daten – <strong>Name, E-Mail-Adresse und Nachricht</strong> –
+    verarbeitet, um deine Anfrage zu bearbeiten und zu beantworten.
+  </p>
+  <p>
+    Für den Versand des Formulars wird der Dienst <strong>Web3Forms</strong>
+    (betrieben durch Web3Forms) eingesetzt. Web3Forms verarbeitet die im
+    Formular eingegebenen Daten in unserem Auftrag und leitet sie per E-Mail an
+    mich weiter. Weitere Informationen:
+    <a href='https://web3forms.com/privacy' rel='noopener'
+      >https://web3forms.com/privacy</a
+    >.
+  </p>
+  <p>
+    Alternativ kannst du mich jederzeit direkt per E-Mail kontaktieren; dann
+    verarbeite ich die in der E-Mail enthaltenen Daten.
+  </p>
+  <p>
+    <strong>Rechtsgrundlage:</strong> Die Verarbeitung erfolgt auf Grundlage
+    deiner Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) sowie – bei Anfragen mit
+    Bezug zu einem möglichen Vertrag – zur Durchführung vorvertraglicher
+    Maßnahmen (Art. 6 Abs. 1 lit. b DSGVO).
+  </p>
+  <p>
+    <strong>Speicherdauer:</strong> Ich speichere deine Anfrage, bis sie
+    vollständig bearbeitet ist bzw. solange gesetzliche Aufbewahrungspflichten
+    bestehen. Danach werden die Daten gelöscht.
+  </p>
+
+  <h2>4. Cookies und lokale Speicherung</h2>
+  <p>
+    Diese Website setzt <strong>keine Tracking- oder Analyse-Cookies</strong>
+    ein. Zur Speicherung deiner Design-Einstellung (heller/dunkler Modus) wird
+    ausschließlich der lokale Speicher (localStorage) deines Browsers verwendet.
+    Diese Information verbleibt auf deinem Gerät und wird nicht an mich oder
+    Dritte übermittelt. Sie ist für die von dir gewünschte Darstellung technisch
+    erforderlich.
+  </p>
+
+  <h2>5. Empfänger der Daten</h2>
+  <p>
+    Eine Weitergabe deiner Daten erfolgt nur an die zur Erbringung des Dienstes
+    eingesetzten Auftragsverarbeiter (Hosting: GitHub, Inc.; Formularversand:
+    Web3Forms) oder wenn ich gesetzlich dazu verpflichtet bin. Eine darüber
+    hinausgehende Weitergabe an Dritte findet nicht statt.
+  </p>
+
+  <h2>6. Deine Rechte</h2>
+  <p>
+    Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der
+    Verarbeitung, Datenübertragbarkeit und Widerspruch (Art. 15–21 DSGVO) sowie
+    das Recht, eine erteilte Einwilligung jederzeit zu widerrufen. Dafür genügt
+    eine formlose Nachricht an <a href={`mailto:${contact.email}`}>{contact.email}</a>.
+  </p>
+  <p>
+    Wenn du der Ansicht bist, dass die Verarbeitung deiner Daten gegen das
+    Datenschutzrecht verstößt, kannst du dich bei der Österreichischen
+    Datenschutzbehörde (Barichgasse 40–42, 1030 Wien,
+    <a href='https://www.dsb.gv.at' rel='noopener'>www.dsb.gv.at</a>)
+    beschweren.
+  </p>
+</LegalLayout>

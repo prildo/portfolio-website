@@ -1,0 +1,75 @@
+---
+import '@/styles/global.css'
+import { fullName } from '@/data.json'
+import Footer from '@/components/footer.astro'
+
+interface Props {
+  title: string
+  description?: string
+}
+
+const { title, description } = Astro.props
+const pageTitle = `${title} – ${fullName}`
+
+const [firstName, ...rest] = fullName.split(' ')
+const lastName = rest.join(' ')
+---
+
+<html lang='de'>
+  <head>
+    <meta charset='utf-8' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
+    <meta name='generator' content={Astro.generator} />
+    <title>{pageTitle}</title>
+    {description && <meta name='description' content={description} />}
+    <meta name='robots' content='noindex, follow' />
+    <meta name='theme-color' content='#020617' />
+
+    <!-- Apply the theme before paint to avoid a flash. Dark is the default;
+         light only applies when the visitor has explicitly chosen it. -->
+    <script is:inline>
+      if (localStorage.getItem('theme') !== 'light') {
+        document.documentElement.classList.add('dark')
+      }
+    </script>
+
+    <!-- Always open the legal pages at the top: prevent the browser from
+         restoring a previous scroll position (e.g. when arriving from the
+         footer at the bottom of the homepage, or via back/forward). -->
+    <script is:inline>
+      history.scrollRestoration = 'manual'
+      window.addEventListener('pageshow', () => window.scrollTo(0, 0))
+    </script>
+  </head>
+  <body>
+    <header
+      class='sticky top-0 z-50 border-b border-slate-200/70 bg-white/80 backdrop-blur-md dark:border-slate-800/70 dark:bg-slate-950/80'>
+      <nav
+        class='mx-auto flex max-w-screen-xl items-center justify-between px-5 py-3.5'>
+        <a
+          href='/'
+          class='flex items-center gap-1 text-lg font-bold tracking-tight text-slate-900 dark:text-white'>
+          <span>{firstName}</span>
+          <span class='text-primary-600 dark:text-primary-400'>{lastName}</span>
+        </a>
+        <a
+          href='/'
+          class='rounded-lg px-3 py-2 text-sm font-medium text-slate-600 transition-colors hover:bg-slate-100 hover:text-slate-900 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-white'>
+          ← Zur Startseite
+        </a>
+      </nav>
+    </header>
+
+    <main class='section'>
+      <div class='wrapper max-w-3xl'>
+        <h1 class='text-3xl font-bold tracking-tight sm:text-4xl'>{title}</h1>
+        <div class='legal-prose mt-8'>
+          <slot />
+        </div>
+      </div>
+    </main>
+
+    <Footer />
+  </body>
+</html>

@@ -139,6 +139,24 @@ const { social } = contact
               placeholder='Ich würde gerne …'></textarea>
           </div>
 
+          <div class='flex items-start gap-3'>
+            <input
+              type='checkbox'
+              id='privacy'
+              class='mt-1 h-4 w-4 flex-shrink-0 rounded border-slate-300 text-primary-600 focus:ring-2 focus:ring-primary-500/30 dark:border-slate-700 dark:bg-slate-800'
+            />
+            <label
+              for='privacy'
+              class='text-sm text-slate-600 dark:text-slate-400'>
+              Ich habe die <a
+                href='/datenschutz'
+                class='font-medium text-primary-600 underline underline-offset-2 hover:text-primary-700 dark:text-primary-400'
+                >Datenschutzerklärung</a
+              > gelesen und stimme der Verarbeitung meiner Daten zur Bearbeitung
+              meiner Anfrage zu.
+            </label>
+          </div>
+
           <div
             style='display: none;'
             id='alert-container'
@@ -196,6 +214,7 @@ const { social } = contact
   const nameInput = $('#name') as HTMLInputElement
   const emailInput = $('#email') as HTMLInputElement
   const messageInput = $('#message') as HTMLTextAreaElement
+  const privacyInput = $('#privacy') as HTMLInputElement
   const alertContainer = $('#alert-container') as HTMLDivElement
   const alertBody = $('#alert-body') as HTMLDivElement
   const alertSuccess = $('#success-alert') as HTMLDivElement
@@ -224,6 +243,14 @@ const { social } = contact
       alertSuccess.style.display = 'none'
       alertContainer.style.display = 'flex'
       alertBody.textContent = result.issues[0].message
+      return false
+    }
+
+    if (!privacyInput?.checked) {
+      alertSuccess.style.display = 'none'
+      alertContainer.style.display = 'flex'
+      alertBody.textContent =
+        'Bitte stimme der Datenschutzerklärung zu, um fortzufahren.'
       return false
     }
 

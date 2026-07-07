@@ -38,8 +38,21 @@ const { social } = contact
       </a>
     </div>
 
-    <div class='text-sm text-slate-500 dark:text-slate-400'>
-      &copy; {today.getFullYear()} DI {fullName}
+    <div
+      class='flex flex-col items-center gap-2 text-sm text-slate-500 sm:items-end dark:text-slate-400'>
+      <nav class='flex items-center gap-4'>
+        <a
+          href='/impressum'
+          class='transition-colors hover:text-primary-600 dark:hover:text-primary-400'
+          >Impressum</a
+        >
+        <a
+          href='/datenschutz'
+          class='transition-colors hover:text-primary-600 dark:hover:text-primary-400'
+          >Datenschutz</a
+        >
+      </nav>
+      <div>&copy; {today.getFullYear()} DI {fullName}</div>
     </div>
   </div>
 </footer>
