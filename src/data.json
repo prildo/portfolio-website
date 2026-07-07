@@ -1,10 +1,11 @@
 {
   "metaData": {
     "title": "Freelance Fullstack-Entwickler",
-    "description": "Dominik Prilmüller – freiberuflicher Fullstack-Entwickler aus Linz. Individuelle Webanwendungen mit Angular & Spring Boot, DevOps und Cloud.",
+    "description": "Dominik Prilmüller – freiberuflicher Fullstack-Entwickler aus Linz. Individuelle Webanwendungen mit Angular & Spring Boot: schnell zum MVP mit echtem Mehrwert, dann Schritt für Schritt weiter.",
     "keywords": [
       "Fullstack-Entwickler",
       "Freelancer",
+      "MVP",
       "Angular",
       "Spring Boot",
       "Java",
@@ -15,16 +16,16 @@
   },
   "fullName": "Dominik Prilmüller",
   "role": "Freelance Fullstack-Entwickler",
-  "heroTitle": "Individuelle Webanwendungen & Apps",
-  "heroTitleAccent": "mit durchdachtem Requirement Engineering",
-  "tagline": "Ich unterstütze dich schon bei der Planung: Wir klären gemeinsam, was du wirklich brauchst und wie wir es am besten umsetzen – von der ersten Anforderung bis zur fertigen Lösung.",
+  "heroTitle": "Individuelle Software, die dein Geschäft voranbringt",
+  "heroTitleAccent": "schnell zum MVP, dann Schritt für Schritt weiter",
+  "tagline": "Ich unterstütze kleine und mittlere Unternehmen dabei, ihr Geschäft zu digitalisieren oder aus einer Idee ein Produkt zu machen: schnell zu einer nutzbaren Lösung mit echtem Mehrwert – und Schritt für Schritt weiter. Dabei bringe ich mich fachlich ein und bilde deine Geschäftsprozesse effizient ab.",
   "available": true,
   "availabilityText": "Verfügbar für neue Projekte",
   "aboutMe": [
-    "Mein Name ist Dominik und ich bin ein erfahrener Fullstack-Entwickler mit Schwerpunkt auf Java, Spring und Angular. Seit über 10 Jahren entwickle ich maßgeschneiderte Softwarelösungen.",
-    "Mein Fokus liegt auf sauberem Code, nachhaltigen Architekturen und effizienter Umsetzung. Ich unterstütze dich dabei, deine Ideen in leistungsfähige Anwendungen zu verwandeln – sei es durch individuelle Webanwendungen, moderne CMS-Lösungen oder Software, die genau auf deine Anforderungen zugeschnitten ist.",
-    "In der Umsetzung setze ich auf moderne, KI-gestützte Entwicklungswerkzeuge, um schneller und mit gleichbleibender Qualität zu liefern.",
-    "Lass uns gemeinsam dein Projekt auf das nächste Level bringen!"
+    "Mein Name ist Dominik – Fullstack-Entwickler aus Linz mit Schwerpunkt auf Java, Spring Boot und Angular. Seit über zehn Jahren entwickle ich Software, zuletzt unter anderem im Core-Architecture-Team einer großen Bank.",
+    "Als Freelancer richte ich mich gezielt an kleine und mittlere Unternehmen, die ihr Geschäft digitalisieren oder eine Idee umsetzen wollen. Dabei geht es mir nicht um Technik um ihrer selbst willen, sondern um Lösungen, die dein Geschäft wirklich voranbringen. Deshalb starten wir mit einem MVP – dem kleinsten sinnvollen Umfang, der bereits echten Mehrwert bringt – und entwickeln ihn auf Basis realer Erfahrungen Schritt für Schritt weiter.",
+    "Ich bringe mich gern fachlich ein: Gemeinsam schauen wir, wie sich deine Geschäftsprozesse effizient und nachvollziehbar in Software abbilden lassen. Dabei setze ich auf sauberen Code, tragfähige Architekturen und moderne, KI-gestützte Werkzeuge, um schnell und in gleichbleibender Qualität zu liefern.",
+    "Lass uns gemeinsam dein Projekt umsetzen!"
   ],
   "stats": [
     { "value": "10+", "label": "Jahre Erfahrung" },
@@ -35,44 +36,44 @@
     {
       "icon": "app-window",
       "title": "Individuelle Webanwendungen",
-      "description": "Performante Single-Page-Applikationen mit Angular – vom Konzept bis zum produktiven Betrieb, sauber getestet und wartbar."
+      "description": "Maßgeschneiderte Web-Apps – vom MVP bis zum produktiven Betrieb, sauber getestet und wartbar. Die Technologie wähle ich passend zu deinem Vorhaben."
     },
     {
       "icon": "server",
       "title": "Backend & APIs",
-      "description": "Robuste Backends mit Java & Spring Boot, durchdachte REST-APIs und Datenmodelle auf Basis von PostgreSQL."
+      "description": "Robuste Backends, durchdachte APIs und tragfähige Datenmodelle – als solide Basis für deine Anwendung."
+    },
+    {
+      "icon": "refresh",
+      "title": "Konzeption & Fachberatung",
+      "description": "Gemeinsam finden wir den richtigen MVP-Umfang und bilden deine Geschäftsprozesse effizient ab – von der Anforderung bis zur tragfähigen Architektur."
     },
     {
       "icon": "cloud",
       "title": "DevOps & Cloud",
-      "description": "Automatisierte CI/CD-Pipelines, Containerisierung mit Docker & Kubernetes und Deployments in Azure."
-    },
-    {
-      "icon": "refresh",
-      "title": "Modernisierung & Beratung",
-      "description": "Ablösung von Altsystemen, Architektur-Reviews und technische Beratung, damit deine Software langfristig tragfähig bleibt."
+      "description": "Automatisierte CI/CD-Pipelines, Containerisierung und Deployments in der Cloud – für zuverlässige Auslieferung und Betrieb."
     }
   ],
   "process": [
     {
       "step": "01",
       "title": "Kennenlernen",
-      "description": "Wir klären deine Ziele, Anforderungen und Rahmenbedingungen in einem unverbindlichen Gespräch."
+      "description": "Wir klären deine Ziele, Anforderungen und Rahmenbedingungen – und was den größten Mehrwert bringt."
     },
     {
       "step": "02",
-      "title": "Konzept",
-      "description": "Ich entwerfe eine passende technische Lösung inklusive Aufwandsschätzung und Zeitplan."
+      "title": "MVP definieren",
+      "description": "Wir schnüren den kleinsten sinnvollen Umfang, der bereits echten Nutzen stiftet – inklusive Aufwandsschätzung und Zeitplan."
     },
     {
       "step": "03",
       "title": "Umsetzung",
-      "description": "Entwicklung in kurzen, transparenten Iterationen mit regelmäßigen Zwischenständen."
+      "description": "Entwicklung in kurzen, transparenten Iterationen – du bekommst früh eine nutzbare Lösung in die Hand."
     },
     {
       "step": "04",
-      "title": "Betrieb & Support",
-      "description": "Deployment, Monitoring und laufende Weiterentwicklung – auf Wunsch übernehme ich auch den Betrieb."
+      "title": "Weiterentwicklung",
+      "description": "Auf Basis echter Erfahrungen entwickeln wir die Lösung Schritt für Schritt weiter. Auf Wunsch übernehme ich auch Betrieb und Support – auf einer vom Kunden bereitgestellten Cloud-Infrastruktur, vorzugsweise Azure oder AWS."
     }
   ],
   "skills": [
@@ -84,32 +85,41 @@
     "postgresql",
     "aws",
     "azure",
-    "gitlab",
+    { "icon": "gitlab", "label": "GitLab CI" },
     "jenkins",
     "docker",
     "kubernetes"
   ],
+  "experience": [
+    {
+      "role": "Freelance Fullstack-Entwickler",
+      "company": "Selbstständig",
+      "period": "seit 2025",
+      "description": "Individuelle Webanwendungen für kleine und mittlere Unternehmen – MVP-orientiert und in enger fachlicher Zusammenarbeit. Fokus auf Digitalisierung und die effiziente Abbildung von Geschäftsprozessen.",
+      "tags": []
+    },
+    {
+      "role": "Fullstack-Entwickler – Core Architecture",
+      "company": "Große österreichische Bank",
+      "period": "2024 – 2026",
+      "description": "Im zentralen Architektur-Team an wiederverwendbaren Bausteinen und Standards für die Entwicklungsteams gearbeitet.",
+      "tags": ["Angular", "Spring Boot", "Java", "Kubernetes", "Docker", "Jenkins", "Azure"]
+    },
+    {
+      "role": "Fullstack-Entwickler",
+      "company": "IT-Dienstleister",
+      "period": "2013 – 2024",
+      "description": "Über mehrere Jahre Kundenprojekte in unterschiedlichen Branchen umgesetzt – von der Anforderung bis zum Betrieb.",
+      "tags": ["Angular", "Java", "Spring", "Docker", "GitLab CI", "Azure"]
+    }
+  ],
   "projects": [
     {
-      "title": "Projekttitel",
+      "title": "progutschein.at",
       "category": "Webanwendung",
-      "description": "Kurze Beschreibung des Projekts: Ausgangslage, umgesetzte Lösung und das Ergebnis für den Kunden. Ersetze diesen Platzhalter durch eine echte Case Study.",
-      "tags": ["Angular", "Spring Boot", "PostgreSQL"],
-      "link": ""
-    },
-    {
-      "title": "Projekttitel",
-      "category": "DevOps",
-      "description": "Kurze Beschreibung des Projekts: Ausgangslage, umgesetzte Lösung und das Ergebnis für den Kunden. Ersetze diesen Platzhalter durch eine echte Case Study.",
-      "tags": ["Docker", "Kubernetes", "Azure"],
-      "link": ""
-    },
-    {
-      "title": "Projekttitel",
-      "category": "Modernisierung",
-      "description": "Kurze Beschreibung des Projekts: Ausgangslage, umgesetzte Lösung und das Ergebnis für den Kunden. Ersetze diesen Platzhalter durch eine echte Case Study.",
-      "tags": ["Java", "Spring", "CI/CD"],
-      "link": ""
+      "description": "Für Progast.plus habe ich eine Plattform entwickelt, die den Geschäftsprozess rund um Gutscheine verschiedener Handelsketten digitalisiert: Gutscheine werden zentral verwaltet und teilweise direkt über die Plattform erstellt. Betriebsräte kaufen sie online und geben sie an ihre Mitarbeiterinnen und Mitarbeiter weiter. Die Lösung ist produktiv im Einsatz und wird laufend weiterentwickelt.",
+      "tags": ["Angular", "Spring Boot", "AWS"],
+      "link": "https://progutschein.at"
     }
   ],
   "contact": {

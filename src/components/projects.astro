@@ -6,14 +6,14 @@ import { projects } from '@/data.json'
   <div class='wrapper'>
     <div data-reveal>
       <span class='eyebrow'>Projekte</span>
-      <h2 class='section-title'>Ausgewählte Arbeiten</h2>
+      <h2 class='section-title'>Als Freelancer umgesetzt</h2>
       <p class='section-lead'>
-        Ein Einblick in Projekte, an denen ich gearbeitet habe. Gerne erzähle
-        ich dir im Gespräch mehr über die Details.
+        Als Freelancer stehe ich am Anfang – umso mehr Sorgfalt steckt in jedem
+        Projekt. Gerne erzähle ich dir im Gespräch mehr über die Details.
       </p>
     </div>
 
-    <div class='mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3'>
+    <div class='mx-auto mt-12 grid max-w-4xl gap-6 sm:grid-cols-2'>
       {
         projects.map((project, i) => {
           const Tag = project.link ? 'a' : 'div'
@@ -60,6 +60,36 @@ import { projects } from '@/data.json'
           )
         })
       }
+
+      <a
+        href='#contact'
+        class='card group flex flex-col items-start justify-center border-dashed hover:border-primary-300 hover:shadow-lg hover:shadow-primary-900/5 dark:hover:border-primary-700'
+        data-reveal
+        style={`animation-delay:${projects.length * 80}ms`}>
+        <span class='inline-block rounded-full bg-primary-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-primary-700 dark:bg-primary-950/60 dark:text-primary-400'>
+          Dein Projekt?
+        </span>
+        <h3 class='mt-4 text-xl font-semibold'>Hier könnte dein Projekt stehen</h3>
+        <p class='mt-2 flex-1 text-sm leading-relaxed text-slate-600 dark:text-slate-400'>
+          Ich habe aktuell Kapazität für neue Vorhaben. Lass uns über deine Idee
+          sprechen – gemeinsam finden wir den richtigen ersten Schritt.
+        </p>
+        <span class='mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary-600 group-hover:gap-2 dark:text-primary-400'>
+          Projekt besprechen
+          <svg
+            xmlns='http://www.w3.org/2000/svg'
+            width='16'
+            height='16'
+            viewBox='0 0 24 24'
+            fill='none'
+            stroke='currentColor'
+            stroke-width='2'
+            stroke-linecap='round'
+            stroke-linejoin='round'>
+            <path d='M5 12h14M12 5l7 7-7 7' />
+          </svg>
+        </span>
+      </a>
     </div>
   </div>
 </section>
