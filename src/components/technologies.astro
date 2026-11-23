@@ -16,7 +16,7 @@ import { Image } from 'astro:assets'
     </div>
 
     <div
-      class='mt-12 grid grid-cols-3 gap-4 sm:grid-cols-4 lg:grid-cols-6'
+      class='mt-8 md:mt-12 grid grid-cols-3 gap-4 sm:grid-cols-4 lg:grid-cols-6'
       data-reveal>
       {skills.map((skill) => {
         const icon = typeof skill === 'string' ? skill : skill.icon
@@ -25,15 +25,42 @@ import { Image } from 'astro:assets'
           <div
             title={label}
             class='card flex flex-col items-center gap-3 p-5 hover:border-primary-300 dark:hover:border-primary-700'>
-            <Image
-              class='h-12 w-12'
-              src={`https://go-skill-icons.vercel.app/api/icons?i=${icon}`}
-              loading='lazy'
-              width={48}
-              height={48}
-              alt={label}
-            />
-            <span class='text-sm font-medium capitalize text-slate-600 dark:text-slate-400'>
+            {icon === 'cicd' ? (
+              <span
+                class='flex h-12 w-12 items-center justify-center rounded-[11px] bg-[#F4F2ED] text-primary-600'
+                role='img'
+                aria-label={label}>
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  width='28'
+                  height='28'
+                  viewBox='0 0 24 24'
+                  fill='none'
+                  stroke='currentColor'
+                  stroke-width='2'
+                  stroke-linecap='round'
+                  stroke-linejoin='round'
+                  aria-hidden='true'>
+                  <rect width='8' height='8' x='3' y='3' rx='2' />
+                  <path d='M7 11v4a2 2 0 0 0 2 2h4' />
+                  <rect width='8' height='8' x='13' y='13' rx='2' />
+                </svg>
+              </span>
+            ) : (
+              <Image
+                class='h-12 w-12'
+                src={`https://go-skill-icons.vercel.app/api/icons?i=${icon}`}
+                loading='lazy'
+                width={48}
+                height={48}
+                alt={label}
+              />
+            )}
+            <span
+              class:list={[
+                'text-sm font-medium text-slate-600 dark:text-slate-400',
+                { capitalize: typeof skill === 'string' },
+              ]}>
               {label}
             </span>
           </div>

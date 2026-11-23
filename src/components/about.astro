@@ -1,5 +1,12 @@
 ---
-import { aboutMe, fullName } from '@/data.json'
+import {
+  aboutMe,
+  aboutTitle,
+  aboutHighlights,
+  fullName,
+  role,
+  contact,
+} from '@/data.json'
 import { Image } from 'astro:assets'
 import MyPicture from '@/assets/me.png'
 ---
@@ -7,29 +14,65 @@ import MyPicture from '@/assets/me.png'
 <section
   id='about'
   class='section border-t border-slate-100 dark:border-slate-900'>
-  <div class='wrapper grid items-center gap-12 md:grid-cols-2 md:gap-16'>
-    <div class='flex justify-center md:justify-start' data-reveal>
-      <div class='relative'>
+  <div class='wrapper grid items-center gap-8 lg:grid-cols-[5fr_7fr] lg:gap-16'>
+    <div class='flex justify-center lg:justify-start' data-reveal>
+      <div class='relative w-full max-w-xs sm:max-w-sm lg:max-w-none'>
         <div class='absolute -inset-4 -z-10 rounded-3xl bg-gradient-to-tr from-primary-500/30 to-primary-300/10 blur-2xl'></div>
         <div class='overflow-hidden rounded-3xl border border-slate-200/60 shadow-2xl shadow-primary-900/10 dark:border-slate-800'>
           <Image
             src={MyPicture}
             alt={fullName}
             loading='lazy'
-            class='aspect-[4/5] w-60 object-cover object-top sm:w-72'
+            widths={[400, 640, 960]}
+            sizes='(min-width: 1024px) 40vw, 384px'
+            class='h-auto w-full'
           />
+        </div>
+        <div class='mt-4 rounded-2xl lg:absolute lg:-bottom-5 lg:left-5 lg:right-5 lg:mt-0 border border-slate-200 bg-white/90 px-5 py-3 shadow-lg backdrop-blur dark:border-slate-800 dark:bg-slate-900/90'>
+          <p class='font-semibold'>{fullName}</p>
+          <p class='text-sm text-slate-500 dark:text-slate-400'>
+            {role} · {contact.location}
+          </p>
         </div>
       </div>
     </div>
 
     <div data-reveal>
       <span class='eyebrow'>Über mich</span>
-      <h2 class='section-title'>Erfahrener Fullstack-Entwickler</h2>
+      <h2 class='section-title'>{aboutTitle}</h2>
       <div class='mt-6 space-y-4 text-lg text-slate-600 dark:text-slate-400'>
         {aboutMe.map((paragraph) => (
           <p>{paragraph}</p>
         ))}
       </div>
+
+      <ul class='mt-8 grid gap-4 sm:grid-cols-2'>
+        {aboutHighlights.map((item) => (
+          <li class='flex gap-3'>
+            <span class='mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary-50 text-primary-600 dark:bg-primary-950/60 dark:text-primary-400'>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                width='14'
+                height='14'
+                viewBox='0 0 24 24'
+                fill='none'
+                stroke='currentColor'
+                stroke-width='3'
+                stroke-linecap='round'
+                stroke-linejoin='round'
+                aria-hidden='true'>
+                <path d='M20 6 9 17l-5-5' />
+              </svg>
+            </span>
+            <div>
+              <p class='font-semibold'>{item.title}</p>
+              <p class='mt-0.5 text-sm leading-relaxed text-slate-600 dark:text-slate-400'>
+                {item.text}
+              </p>
+            </div>
+          </li>
+        ))}
+      </ul>
     </div>
   </div>
 </section>
