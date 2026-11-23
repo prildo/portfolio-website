@@ -14,12 +14,12 @@ import { fullName, contact } from '@/data.json'
   </p>
 
   <h2>1. Verantwortlicher</h2>
+  <p>Verantwortlich für die Datenverarbeitung im Sinne der DSGVO ist:</p>
   <p>
-    Verantwortlich für die Datenverarbeitung im Sinne der DSGVO ist:
-  </p>
-  <p>
-    <strong>{fullName}</strong><br />
-    Aumühlstraße 49a, 4050 Traun, Österreich<br />
+    <strong>{fullName}</strong>
+    <br />
+    Aumühlstraße 49a, 4050 Traun, Österreich
+    <br />
     E-Mail: <a href={`mailto:${contact.email}`}>{contact.email}</a>
   </p>
 
@@ -44,9 +44,10 @@ import { fullName, contact } from '@/data.json'
     Art. 6 Abs. 1 lit. f DSGVO. Da GitHub, Inc. in den USA sitzt, kann es zu
     einer Datenübermittlung in ein Drittland kommen; GitHub stützt diese auf die
     EU-Standardvertragsklauseln. Details:
-    <a href='https://docs.github.com/privacy' rel='noopener'
-      >https://docs.github.com/privacy</a
-    >.
+    <a href='https://docs.github.com/privacy' rel='noopener'>
+      https://docs.github.com/privacy
+    </a>
+    .
   </p>
 
   <h2>3. Kontaktaufnahme per Kontaktformular</h2>
@@ -60,9 +61,10 @@ import { fullName, contact } from '@/data.json'
     (betrieben durch Web3Forms) eingesetzt. Web3Forms verarbeitet die im
     Formular eingegebenen Daten in unserem Auftrag und leitet sie per E-Mail an
     mich weiter. Weitere Informationen:
-    <a href='https://web3forms.com/privacy' rel='noopener'
-      >https://web3forms.com/privacy</a
-    >.
+    <a href='https://web3forms.com/privacy' rel='noopener'>
+      https://web3forms.com/privacy
+    </a>
+    .
   </p>
   <p>
     Alternativ kannst du mich jederzeit direkt per E-Mail kontaktieren; dann
@@ -103,13 +105,16 @@ import { fullName, contact } from '@/data.json'
     Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der
     Verarbeitung, Datenübertragbarkeit und Widerspruch (Art. 15–21 DSGVO) sowie
     das Recht, eine erteilte Einwilligung jederzeit zu widerrufen. Dafür genügt
-    eine formlose Nachricht an <a href={`mailto:${contact.email}`}>{contact.email}</a>.
+    eine formlose Nachricht an{' '}
+    <a href={`mailto:${contact.email}`}>{contact.email}</a>.
   </p>
   <p>
     Wenn du der Ansicht bist, dass die Verarbeitung deiner Daten gegen das
     Datenschutzrecht verstößt, kannst du dich bei der Österreichischen
     Datenschutzbehörde (Barichgasse 40–42, 1030 Wien,
-    <a href='https://www.dsb.gv.at' rel='noopener'>www.dsb.gv.at</a>)
-    beschweren.
+    <a href='https://www.dsb.gv.at' rel='noopener'>
+      www.dsb.gv.at
+    </a>
+    ) beschweren.
   </p>
 </LegalLayout>

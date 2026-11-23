@@ -103,7 +103,15 @@
       "company": "Große österreichische Bank",
       "period": "2024 – 2026",
       "description": "Im zentralen Architektur-Team an wiederverwendbaren Bausteinen und Standards für die Entwicklungsteams gearbeitet.",
-      "tags": ["Angular", "Spring Boot", "Java", "Kubernetes", "Docker", "Jenkins", "Azure"]
+      "tags": [
+        "Angular",
+        "Spring Boot",
+        "Java",
+        "Kubernetes",
+        "Docker",
+        "Jenkins",
+        "Azure"
+      ]
     },
     {
       "role": "Fullstack-Entwickler",

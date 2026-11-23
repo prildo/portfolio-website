@@ -13,10 +13,8 @@ const [firstName, ...rest] = fullName.split(' ')
 const lastName = rest.join(' ')
 ---
 
-<header
-  class='sticky top-0 z-50 border-b border-slate-200/70 bg-white/80 backdrop-blur-md dark:border-slate-800/70 dark:bg-slate-950/80'>
-  <nav
-    class='mx-auto flex max-w-screen-xl items-center justify-between px-5 py-3.5'>
+<header class='sticky top-0 z-50 border-b border-slate-200/70 bg-white/80 backdrop-blur-md dark:border-slate-800/70 dark:bg-slate-950/80'>
+  <nav class='mx-auto flex max-w-screen-xl items-center justify-between px-5 py-3.5'>
     <a
       href='#home'
       class='flex items-center gap-1 text-lg font-bold tracking-tight text-slate-900 dark:text-white'>
@@ -26,15 +24,13 @@ const lastName = rest.join(' ')
 
     <!-- Desktop nav -->
     <div class='hidden items-center gap-1 md:flex'>
-      {
-        sections.map(s => (
-          <a
-            href={`#${s.anchor}`}
-            class='nav-link rounded-lg px-3 py-2 text-sm font-medium text-slate-600 transition-colors hover:bg-slate-100 hover:text-slate-900 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-white'>
-            {s.text}
-          </a>
-        ))
-      }
+      {sections.map((s) => (
+        <a
+          href={`#${s.anchor}`}
+          class='nav-link rounded-lg px-3 py-2 text-sm font-medium text-slate-600 transition-colors hover:bg-slate-100 hover:text-slate-900 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-white'>
+          {s.text}
+        </a>
+      ))}
       <a
         href='#contact'
         class='ml-2 rounded-lg bg-primary-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-primary-700'>
@@ -55,9 +51,7 @@ const lastName = rest.join(' ')
           stroke-linecap='round'
           stroke-linejoin='round'>
           <circle cx='12' cy='12' r='4'></circle>
-          <path
-            d='M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41'
-          ></path>
+          <path d='M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41'></path>
         </svg>
         <svg
           class='hidden h-5 w-5 dark:block'
@@ -90,9 +84,7 @@ const lastName = rest.join(' ')
           stroke-linecap='round'
           stroke-linejoin='round'>
           <circle cx='12' cy='12' r='4'></circle>
-          <path
-            d='M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41'
-          ></path>
+          <path d='M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41'></path>
         </svg>
         <svg
           class='hidden h-5 w-5 dark:block'
@@ -133,17 +125,15 @@ const lastName = rest.join(' ')
     id='mobile-menu'
     class='hidden border-t border-slate-200 bg-white px-5 py-4 md:hidden dark:border-slate-800 dark:bg-slate-950'>
     <ul class='flex flex-col gap-1'>
-      {
-        sections.map(s => (
-          <li>
-            <a
-              href={`#${s.anchor}`}
-              class='menu-item block rounded-lg px-3 py-2.5 text-base font-medium text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-slate-800'>
-              {s.text}
-            </a>
-          </li>
-        ))
-      }
+      {sections.map((s) => (
+        <li>
+          <a
+            href={`#${s.anchor}`}
+            class='menu-item block rounded-lg px-3 py-2.5 text-base font-medium text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-slate-800'>
+            {s.text}
+          </a>
+        </li>
+      ))}
     </ul>
   </div>
 </header>
@@ -155,11 +145,13 @@ const lastName = rest.join(' ')
     localStorage.setItem('theme', dark ? 'dark' : 'light')
   }
 
-  document.querySelectorAll('#theme-toggle, #theme-toggle-mobile').forEach(btn =>
-    btn.addEventListener('click', () => {
-      setTheme(!document.documentElement.classList.contains('dark'))
-    })
-  )
+  document
+    .querySelectorAll('#theme-toggle, #theme-toggle-mobile')
+    .forEach((btn) =>
+      btn.addEventListener('click', () => {
+        setTheme(!document.documentElement.classList.contains('dark'))
+      }),
+    )
 
   // Mobile menu
   const menuToggle = document.getElementById('menu-toggle')
@@ -171,12 +163,12 @@ const lastName = rest.join(' ')
     menuToggle?.setAttribute('aria-expanded', String(!!willOpen))
     menuToggle?.setAttribute(
       'aria-label',
-      willOpen ? 'Menü schließen' : 'Menü öffnen'
+      willOpen ? 'Menü schließen' : 'Menü öffnen',
     )
   }
 
   menuToggle?.addEventListener('click', () => toggleMenu())
   document
     .querySelectorAll('.menu-item')
-    .forEach(item => item.addEventListener('click', () => toggleMenu(false)))
+    .forEach((item) => item.addEventListener('click', () => toggleMenu(false)))
 </script>

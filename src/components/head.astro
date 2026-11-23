@@ -12,7 +12,7 @@ const skillLabels: Record<string, string> = {
   spring: 'Spring Boot',
 }
 
-const knowsAbout = skills.map(skill => {
+const knowsAbout = skills.map((skill) => {
   if (typeof skill !== 'string') return skill.label
   return skillLabels[skill] ?? skill.charAt(0).toUpperCase() + skill.slice(1)
 })
@@ -65,7 +65,6 @@ const jsonLd = {
 <link rel='canonical' href={siteUrl} />
 
 <script type='application/ld+json' set:html={JSON.stringify(jsonLd)} />
-
 <meta name='theme-color' content='#020617' />
 
 <!-- Open Graph / social -->

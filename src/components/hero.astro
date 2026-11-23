@@ -16,32 +16,24 @@ import {
   <div
     class='pointer-events-none absolute inset-0 -z-10 overflow-hidden'
     aria-hidden='true'>
-    <div
-      class='absolute -right-24 -top-24 h-96 w-96 rounded-full bg-primary-400/20 blur-3xl dark:bg-primary-600/20'>
-    </div>
-    <div
-      class='absolute -left-32 top-32 h-80 w-80 rounded-full bg-primary-300/20 blur-3xl dark:bg-primary-800/20'>
-    </div>
+    <div class='absolute -right-24 -top-24 h-96 w-96 rounded-full bg-primary-400/20 blur-3xl dark:bg-primary-600/20'></div>
+    <div class='absolute -left-32 top-32 h-80 w-80 rounded-full bg-primary-300/20 blur-3xl dark:bg-primary-800/20'></div>
   </div>
 
   <div class='wrapper flex flex-col items-center text-center' data-reveal>
-    {
-      available && (
-        <div class='mb-6 inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 text-sm font-medium text-emerald-700 dark:text-emerald-400'>
-          <span class='relative flex h-2 w-2'>
-            <span class='absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-75' />
-            <span class='relative inline-flex h-2 w-2 rounded-full bg-emerald-500' />
-          </span>
-          {availabilityText}
-        </div>
-      )
-    }
+    {available && (
+      <div class='mb-6 inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 text-sm font-medium text-emerald-700 dark:text-emerald-400'>
+        <span class='relative flex h-2 w-2'>
+          <span class='absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-75' />
+          <span class='relative inline-flex h-2 w-2 rounded-full bg-emerald-500' />
+        </span>
+        {availabilityText}
+      </div>
+    )}
 
-    <h1
-      class='max-w-4xl text-4xl font-extrabold leading-[1.1] tracking-tight md:text-5xl xl:text-6xl'>
+    <h1 class='max-w-4xl text-4xl font-extrabold leading-[1.1] tracking-tight md:text-5xl xl:text-6xl'>
       {heroTitle}
-      <span
-        class='mt-2 block bg-gradient-to-r from-primary-600 via-primary-500 to-primary-400 bg-clip-text text-transparent'>
+      <span class='mt-2 block bg-gradient-to-r from-primary-600 via-primary-500 to-primary-400 bg-clip-text text-transparent'>
         {heroTitleAccent}
       </span>
     </h1>
@@ -66,22 +58,22 @@ import {
           <path d='M5 12h14M12 5l7 7-7 7'></path>
         </svg>
       </a>
-      <a href='#services' class='btn-secondary'>Meine Leistungen</a>
+      <a href='#services' class='btn-secondary'>
+        Meine Leistungen
+      </a>
     </div>
 
     <dl class='mt-14 grid w-full max-w-lg grid-cols-3 gap-6'>
-      {
-        stats.map(stat => (
-          <div>
-            <dt class='text-2xl font-bold text-slate-900 md:text-3xl dark:text-white'>
-              {stat.value}
-            </dt>
-            <dd class='mt-1 text-sm text-slate-500 dark:text-slate-400'>
-              {stat.label}
-            </dd>
-          </div>
-        ))
-      }
+      {stats.map((stat) => (
+        <div>
+          <dt class='text-2xl font-bold text-slate-900 md:text-3xl dark:text-white'>
+            {stat.value}
+          </dt>
+          <dd class='mt-1 text-sm text-slate-500 dark:text-slate-400'>
+            {stat.label}
+          </dd>
+        </div>
+      ))}
     </dl>
   </div>
 </section>

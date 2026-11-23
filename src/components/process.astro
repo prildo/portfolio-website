@@ -8,30 +8,30 @@ import { process } from '@/data.json'
   <div class='wrapper'>
     <div data-reveal>
       <span class='eyebrow'>Arbeitsweise</span>
-      <h2 class='section-title'>Erst die nutzbare Version, dann Schritt für Schritt weiter</h2>
+      <h2 class='section-title'>
+        Erst die nutzbare Version, dann Schritt für Schritt weiter
+      </h2>
       <p class='section-lead'>
-        Statt lange auf das perfekte Ergebnis zu warten, kommst du früh zu
-        einer nutzbaren Lösung mit echtem Mehrwert – transparent, planbar und in
-        engem Austausch.
+        Statt lange auf das perfekte Ergebnis zu warten, kommst du früh zu einer
+        nutzbaren Lösung mit echtem Mehrwert – transparent, planbar und in engem
+        Austausch.
       </p>
     </div>
 
     <ol class='mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4'>
-      {
-        process.map((phase, i) => (
-          <li class='relative' data-reveal style={`animation-delay:${i * 80}ms`}>
-            <div class='card h-full hover:border-primary-300 hover:shadow-lg hover:shadow-primary-900/5 dark:hover:border-primary-700'>
-              <span class='text-3xl font-bold text-primary-200 dark:text-primary-900'>
-                {phase.step}
-              </span>
-              <h3 class='mt-2 text-lg font-semibold'>{phase.title}</h3>
-              <p class='mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-400'>
-                {phase.description}
-              </p>
-            </div>
-          </li>
-        ))
-      }
+      {process.map((phase, i) => (
+        <li class='relative' data-reveal style={`animation-delay:${i * 80}ms`}>
+          <div class='card h-full hover:border-primary-300 hover:shadow-lg hover:shadow-primary-900/5 dark:hover:border-primary-700'>
+            <span class='text-3xl font-bold text-primary-200 dark:text-primary-900'>
+              {phase.step}
+            </span>
+            <h3 class='mt-2 text-lg font-semibold'>{phase.title}</h3>
+            <p class='mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-400'>
+              {phase.description}
+            </p>
+          </div>
+        </li>
+      ))}
     </ol>
   </div>
 </section>

@@ -70,7 +70,7 @@
   }
 
   :focus-visible {
-    @apply outline-2 outline-offset-2 outline-primary-500;
+    @apply outline-primary-500 outline-2 outline-offset-2;
   }
 }
 
@@ -82,7 +82,7 @@
 
   /* Small pill above section titles. */
   .eyebrow {
-    @apply inline-block text-sm font-semibold uppercase tracking-widest text-primary-600 dark:text-primary-400;
+    @apply text-primary-600 dark:text-primary-400 inline-block text-sm font-semibold tracking-widest uppercase;
   }
 
   .section-title {
@@ -94,7 +94,7 @@
   }
 
   .btn-primary {
-    @apply btn bg-primary-600 text-white hover:bg-primary-700;
+    @apply btn bg-primary-600 hover:bg-primary-700 text-white;
     @apply focus-visible:outline-primary-600;
   }
 
@@ -126,7 +126,7 @@
     @apply my-3 list-disc space-y-1 pl-5;
   }
   .legal-prose a {
-    @apply text-primary-600 underline underline-offset-2 hover:text-primary-700 dark:text-primary-400;
+    @apply text-primary-600 hover:text-primary-700 dark:text-primary-400 underline underline-offset-2;
   }
   .legal-prose strong {
     @apply font-semibold text-slate-800 dark:text-slate-200;

@@ -18,8 +18,7 @@ const { social } = contact
 
         <dl class='mt-8 space-y-4'>
           <div class='flex items-center gap-3'>
-            <dt
-              class='flex h-10 w-10 items-center justify-center rounded-lg bg-white text-primary-600 shadow-sm dark:bg-slate-800 dark:text-primary-400'>
+            <dt class='flex h-10 w-10 items-center justify-center rounded-lg bg-white text-primary-600 shadow-sm dark:bg-slate-800 dark:text-primary-400'>
               <span class='sr-only'>E-Mail</span>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
@@ -44,8 +43,7 @@ const { social } = contact
             </dd>
           </div>
           <div class='flex items-center gap-3'>
-            <dt
-              class='flex h-10 w-10 items-center justify-center rounded-lg bg-white text-primary-600 shadow-sm dark:bg-slate-800 dark:text-primary-400'>
+            <dt class='flex h-10 w-10 items-center justify-center rounded-lg bg-white text-primary-600 shadow-sm dark:bg-slate-800 dark:text-primary-400'>
               <span class='sr-only'>Standort</span>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
@@ -84,9 +82,7 @@ const { social } = contact
               stroke-width='2'
               stroke-linecap='round'
               stroke-linejoin='round'>
-              <path
-                d='M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z'
-              ></path>
+              <path d='M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z'></path>
               <rect width='4' height='12' x='2' y='9'></rect>
               <circle cx='4' cy='4' r='2'></circle>
             </svg>
@@ -99,9 +95,9 @@ const { social } = contact
           <div>
             <label
               for='name'
-              class='mb-2 block text-sm font-medium text-slate-700 dark:text-slate-300'
-              >Name</label
-            >
+              class='mb-2 block text-sm font-medium text-slate-700 dark:text-slate-300'>
+              Name
+            </label>
             <input
               type='text'
               id='name'
@@ -114,9 +110,9 @@ const { social } = contact
           <div>
             <label
               for='email'
-              class='mb-2 block text-sm font-medium text-slate-700 dark:text-slate-300'
-              >E-Mail</label
-            >
+              class='mb-2 block text-sm font-medium text-slate-700 dark:text-slate-300'>
+              E-Mail
+            </label>
             <input
               id='email'
               type='email'
@@ -129,9 +125,9 @@ const { social } = contact
           <div>
             <label
               for='message'
-              class='mb-2 block text-sm font-medium text-slate-700 dark:text-slate-300'
-              >Nachricht</label
-            >
+              class='mb-2 block text-sm font-medium text-slate-700 dark:text-slate-300'>
+              Nachricht
+            </label>
             <textarea
               id='message'
               rows='6'
@@ -148,11 +144,13 @@ const { social } = contact
             <label
               for='privacy'
               class='text-sm text-slate-600 dark:text-slate-400'>
-              Ich habe die <a
+              Ich habe die{' '}
+              <a
                 href='/datenschutz'
-                class='font-medium text-primary-600 underline underline-offset-2 hover:text-primary-700 dark:text-primary-400'
-                >Datenschutzerklärung</a
-              > gelesen und stimme der Verarbeitung meiner Daten zur Bearbeitung
+                class='font-medium text-primary-600 underline underline-offset-2 hover:text-primary-700 dark:text-primary-400'>
+                Datenschutzerklärung
+              </a>{' '}
+              gelesen und stimme der Verarbeitung meiner Daten zur Bearbeitung
               meiner Anfrage zu.
             </label>
           </div>
@@ -168,9 +166,7 @@ const { social } = contact
               xmlns='http://www.w3.org/2000/svg'
               fill='currentColor'
               viewBox='0 0 20 20'>
-              <path
-                d='M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z'
-              ></path>
+              <path d='M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z'></path>
             </svg>
             <div id='alert-body'></div>
           </div>
@@ -232,8 +228,8 @@ const { social } = contact
       name: v.pipe(v.string(), v.nonEmpty('Bitte gib deinen Namen an.')),
       email: v.pipe(v.string(), v.trim(), v.email('Ungültige E-Mail-Adresse.')),
       message: v.custom(
-        input => typeof input === 'string' && input.split(' ').length > 5,
-        'Bitte beschreibe dein Anliegen etwas ausführlicher.'
+        (input) => typeof input === 'string' && input.split(' ').length > 5,
+        'Bitte beschreibe dein Anliegen etwas ausführlicher.',
       ),
     })
 
@@ -266,13 +262,13 @@ const { social } = contact
     alertBody.textContent = message
   }
 
-  form.addEventListener('submit', e => {
+  form.addEventListener('submit', (e) => {
     e.preventDefault()
     if (!validate()) return
 
     if (!accessKey) {
       showError(
-        'Kontaktformular ist noch nicht konfiguriert (fehlender web3forms-Key). Schreib mir bitte direkt per E-Mail.'
+        'Kontaktformular ist noch nicht konfiguriert (fehlender web3forms-Key). Schreib mir bitte direkt per E-Mail.',
       )
       return
     }
@@ -293,7 +289,7 @@ const { social } = contact
       },
       body: JSON.stringify(data),
     })
-      .then(async response => {
+      .then(async (response) => {
         const res = await response.json()
         if (res.success) {
           alertContainer.style.display = 'none'
@@ -304,14 +300,14 @@ const { social } = contact
           showError(
             res.message
               ? `Nachricht konnte nicht gesendet werden: ${res.message}`
-              : 'Etwas ist schiefgelaufen – die Nachricht konnte nicht gesendet werden.'
+              : 'Etwas ist schiefgelaufen – die Nachricht konnte nicht gesendet werden.',
           )
         }
       })
       .catch(() =>
         showError(
-          'Etwas ist schiefgelaufen – die Nachricht konnte nicht gesendet werden.'
-        )
+          'Etwas ist schiefgelaufen – die Nachricht konnte nicht gesendet werden.',
+        ),
       )
   })
 

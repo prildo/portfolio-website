@@ -18,29 +18,27 @@ import { Image } from 'astro:assets'
     <div
       class='mt-12 grid grid-cols-3 gap-4 sm:grid-cols-4 lg:grid-cols-6'
       data-reveal>
-      {
-        skills.map(skill => {
-          const icon = typeof skill === 'string' ? skill : skill.icon
-          const label = typeof skill === 'string' ? skill : skill.label
-          return (
-            <div
-              title={label}
-              class='card flex flex-col items-center gap-3 p-5 hover:border-primary-300 dark:hover:border-primary-700'>
-              <Image
-                class='h-12 w-12'
-                src={`https://go-skill-icons.vercel.app/api/icons?i=${icon}`}
-                loading='lazy'
-                width={48}
-                height={48}
-                alt={label}
-              />
-              <span class='text-sm font-medium capitalize text-slate-600 dark:text-slate-400'>
-                {label}
-              </span>
-            </div>
-          )
-        })
-      }
+      {skills.map((skill) => {
+        const icon = typeof skill === 'string' ? skill : skill.icon
+        const label = typeof skill === 'string' ? skill : skill.label
+        return (
+          <div
+            title={label}
+            class='card flex flex-col items-center gap-3 p-5 hover:border-primary-300 dark:hover:border-primary-700'>
+            <Image
+              class='h-12 w-12'
+              src={`https://go-skill-icons.vercel.app/api/icons?i=${icon}`}
+              loading='lazy'
+              width={48}
+              height={48}
+              alt={label}
+            />
+            <span class='text-sm font-medium capitalize text-slate-600 dark:text-slate-400'>
+              {label}
+            </span>
+          </div>
+        )
+      })}
     </div>
   </div>
 </section>
